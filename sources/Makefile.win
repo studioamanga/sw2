@@ -1,0 +1,26 @@
+# Project: DirectX
+# Makefile created by Dev-C++ 4.9.2.0
+
+CC   = g++.exe
+WINDRES = windres.exe
+OBJ  = StarWars.o  Rsrc.o
+LIBS =  -L"C:\PROGRAM" -L"FILES\DEV-C++\lib" -L"C:\Program Files\Dev-C++\lib" -L"C:\Program Files\Dev-C++\lib" ../../lib/libd3d8.a  ../../lib/libd3dx8d.a ../../lib/libgdi32.a ../../lib/libdxguid.a  ../../lib/libddraw.a ../../lib/libdinput.a ../../lib/libdinput8.a
+INCS =  -I"C:\Program Files\Dev-C++\include\DX8"  -I"C:\Program Files\Dev-C++\include\gl"  -I"C:\Program Files\Dev-C++\include\opengl" 
+BIN  = Dx.exe
+CFLAGS = $(INCS)  -fvtable-thunks -s
+
+.PHONY: clean
+
+all: Dx.exe
+
+clean:
+	rm -f $(OBJ) $(BIN)
+
+Dx.exe: $(OBJ)
+	$(CC) $(OBJ) -o $(BIN) $(RES) $(LIBS) $(CFLAGS)
+
+StarWars.o: StarWars.cpp
+	$(CC) -c StarWars.cpp -o StarWars.o $(CFLAGS)
+
+Rsrc.o: Rsrc.rc
+	$(WINDRES) -i Rsrc.rc -I rc -o Rsrc.o

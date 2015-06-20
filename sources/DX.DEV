@@ -1,0 +1,27 @@
+[Project]
+FileName=Dx.dev
+Name=DirectX
+Type=1
+Ver=1
+ObjFiles=
+Includes=
+Libs=
+Resources=Rsrc.rc
+Compiler=
+Linker=../../lib/libd3d8.a  ../../lib/libd3dx8d.a ../../lib/libgdi32.a ../../lib/libdxguid.a  ../../lib/libddraw.a ../../lib/libdinput.a ../../lib/libdinput8.a
+IsCpp=1
+Icon=
+UnitCount=1
+Focused=0
+Order=0
+
+[Views]
+ProjectView=1
+
+[Unit1]
+FileName=StarWars.cpp
+Open=1
+Top=1
+CursorCol=24
+CursorRow=18
+
